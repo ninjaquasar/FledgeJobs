@@ -20,13 +20,13 @@ const Navbar = () => {
 				<ul
 					className={`${
 						showDropdown ? "block" : "hidden"
-					} absolute top-10 -left-16 p-3 space-y-2 bg-zinc-200 rounded-xl w-max cursor-auto`}
+					} absolute top-10 -left-16 p-3 space-y-2 bg-slate-200 rounded-xl w-max cursor-auto`}
 				>
 					<Navlink to="/">Home</Navlink>
 					<Navlink to="/jobs-grid">Find Opportunities</Navlink>
 					<li className="relative group cursor-pointer px-2 py-1">
 						On This Page →
-						<ul className="hidden group-hover:block absolute top-0 left-36 p-3 space-y-2 bg-zinc-200 rounded-xl w-max cursor-auto">
+						<ul className="hidden group-hover:block absolute top-0 left-36 p-3 space-y-2 bg-slate-200 rounded-xl w-max cursor-auto">
 							<Navlink to="/#job-categories">Job Categories</Navlink>
 							<Navlink to="/#top-opportunities">Top Opportunities</Navlink>
 							<Navlink to="/#testimonials">What Our Users Say</Navlink>
@@ -64,7 +64,7 @@ const Navbar = () => {
 				<Navlink to="/jobs-grid">Find Opportunities</Navlink>
 				<li className="relative group cursor-pointer px-2 py-1">
 					On This Page ▼
-					<ul className="hidden group-hover:block absolute top-8 p-3 space-y-2 bg-zinc-200 rounded-xl w-max cursor-auto">
+					<ul className="hidden group-hover:block absolute top-8 p-3 space-y-2 bg-slate-200 rounded-xl w-max cursor-auto">
 						<Navlink to="/#job-categories">Job Categories</Navlink>
 						<Navlink to="/#top-opportunities">Top Opportunities</Navlink>
 						<Navlink to="/#testimonials">What Our Users Say</Navlink>
