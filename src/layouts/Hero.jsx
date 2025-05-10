@@ -25,21 +25,24 @@ const Hero = () => {
 				className="bg-slate-200 w-3/5 grid place-items-center"
 			>
 				<div className="max-w-3/4">
-					<h1 className="text-5xl font-bold">Where Talent Meets Opportunity</h1>
+					<h1 className="text-5xl font-bold">
+						Where <span className="text-primary">Talent</span> Meets{" "}
+						<span className="text-primary">Opportunity</span>
+					</h1>
 					<p className="text-xl mt-4">
 						Build your career with jobs that align with your passion and skills, or
 						hire talents who will clean-up your stress effectively.
 					</p>
 					<button
 						type="button"
-						className="mt-8 px-8 py-2 rounded-full bg-primary-light text-light text-2xl font-medium cursor-pointer"
+						className="mt-8 px-8 py-2 rounded-full bg-primary text-light text-2xl font-medium cursor-pointer"
 					>
 						Explore
 					</button>
 				</div>
 			</div>
 			{/* Image Slide | Positioned Right */}
-			<div className="w-2/5">
+			<div className="w-2/5 z-[-1]">
 				<Swiper
 					modules={[Autoplay]}
 					autoplay={{
@@ -48,9 +51,8 @@ const Hero = () => {
 					className="h-full"
 				>
 					{slides.map((slide) => (
-						<SwiperSlide>
+						<SwiperSlide key={slide.image}>
 							<img
-								key={slide.image}
 								src={slide.image}
 								className="size-full"
 							/>
