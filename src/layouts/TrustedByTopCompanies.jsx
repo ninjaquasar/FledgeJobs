@@ -65,7 +65,7 @@ const TrustedByTopCompanies = () => {
 						key={index}
 						src={company.image}
 						width={company.width}
-						className="grayscale-100 hover:grayscale-0 cursor-pointer transition-[filter] duration-100"
+						className="contrast-50 hover:contrast-100 cursor-pointer transition-[filter] duration-100"
 					/>
 				))}
 			</div>
