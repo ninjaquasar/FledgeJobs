@@ -113,6 +113,7 @@ const JobCategories = () => {
 			>
 				{categories.map((category) => (
 					<CategoryCard
+						key={category.name}
 						category={category}
 						roundedIconBox={roundedIconBox}
 						setRoundedIconBox={setRoundedIconBox}
