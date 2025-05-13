@@ -103,32 +103,37 @@ const Testimonials = () => {
 			id="testimonials"
 			className="mt-24 px-60 space-y-12"
 		>
+			{/* Section Header */}
 			<div className="flex items-center justify-center gap-x-4">
 				<MessageSquareQuoteIcon
 					size={40}
 					fill="dodgerblue"
-					strokeWidth={1.5}
+					strokeWidth={1.25}
+					className="motion-safe:animate-bounce"
 				/>
 				<h2 className="text-4xl font-bold md">
 					What Our <span className="text-primary">Users</span> Say
 				</h2>
 			</div>
-			<Swiper
-				modules={[Navigation]}
-				navigation={{
-					enabled: true,
-				}}
-				slidesPerView={3}
-			>
-				{testimonials.map((testimonial) => (
-					<SwiperSlide
-						key={testimonial.id}
-						className="!h-auto !flex"
-					>
-						<TestimonialCard testimonial={testimonial} />
-					</SwiperSlide>
-				))}
-			</Swiper>
+			{/* Review slide */}
+			<div className="relative z-0">
+				<Swiper
+					modules={[Navigation]}
+					navigation={{
+						enabled: true,
+					}}
+					slidesPerView={3}
+				>
+					{testimonials.map((testimonial) => (
+						<SwiperSlide
+							key={testimonial.id}
+							className="!h-auto !flex"
+						>
+							<TestimonialCard testimonial={testimonial} />
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
 		</section>
 	);
 };
