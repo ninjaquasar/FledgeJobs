@@ -1,12 +1,15 @@
 import { Link, NavLink } from "react-router";
 import logo from "../assets/logo.png";
 import { LayersIcon } from "lucide-react";
+import Coin from "../assets/coin.png";
 import { useState } from "react";
 import Headroom from "react-headroom";
 import useAuthContext from "../hooks/useAuthContext";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const Navbar = () => {
-	const [showDropdown, setShowDropdown] = useState(false);
+	const [showMenu, setShowMenu] = useState(false);
 	const { user } = useAuthContext();
 	return (
 		<Headroom>
@@ -19,11 +22,11 @@ const Navbar = () => {
 					<LayersIcon
 						size={32}
 						className="cursor-pointer"
-						onClick={() => setShowDropdown(!showDropdown)}
+						onClick={() => setShowMenu(!showMenu)}
 					/>
 					<ul
 						className={`${
-							showDropdown ? "flex flex-col" : "hidden"
+							showMenu ? "flex flex-col" : "hidden"
 						} absolute top-10 -left-16 p-3 bg-slate-200 rounded-xl w-max cursor-auto`}
 					>
 						<li>
@@ -177,10 +180,56 @@ const Navbar = () => {
 						>
 							Logout
 						</button>
-						<img
-							src="https://i.pinimg.com/474x/a0/22/80/a02280bc7edd3e553dc5425992aada9d.jpg"
-							className="size-12 rounded-full object-cover object-top cursor-pointer"
-						/>
+						<div className="relative rounded-full group">
+							<img
+								src="https://i.pinimg.com/474x/a0/22/80/a02280bc7edd3e553dc5425992aada9d.jpg"
+								className="size-12 rounded-full object-cover object-top cursor-pointer"
+							/>
+							<ul className="hidden group-hover:flex flex-col min-w-40 absolute top-12 -left-4 p-3 bg-slate-200 rounded-xl text-lg font-medium w-max cursor-auto">
+								<Tooltip
+									id="fledgecoins"
+									place="right"
+								/>
+								<li className="px-2 py-1">
+									<Link
+										to="/profile"
+										target="_blank"
+										className="rounded hover:text-primary"
+									>
+										Profile
+									</Link>
+								</li>
+								<li className="px-2 py-1">
+									<Link
+										to="/dashboard"
+										target="_blank"
+										className="rounded hover:text-primary"
+									>
+										Dashboard
+									</Link>
+								</li>
+								<li className="px-2 py-1">
+									<Link
+										to="/"
+										className="rounded hover:text-primary"
+									>
+										Settings
+									</Link>
+								</li>
+								<li
+									data-tooltip-id="fledgecoins"
+									data-tooltip-content="FledgeCoins"
+									className="px-2 pt-3 pb-1 flex items-center gap-x-2"
+								>
+									<img
+										src={Coin}
+										alt="FledgeCoin"
+										className="size-6"
+									/>
+									<span className="text-xl">500</span>
+								</li>
+							</ul>
+						</div>
 					</div>
 				) : (
 					<div
@@ -207,19 +256,6 @@ const Navbar = () => {
 				)}
 			</nav>
 		</Headroom>
-	);
-};
-
-const Navlink = ({ to = "/", children }) => {
-	return (
-		<li>
-			<NavLink
-				to={to}
-				className="px-2 py-1 rounded hover:text-primary"
-			>
-				{children}
-			</NavLink>
-		</li>
 	);
 };
 
