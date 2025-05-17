@@ -31,7 +31,7 @@ const JobCategories = () => {
 			</div>
 			{/* Categories displaying in Grid layout */}
 			<div
-				id="categories-grid"
+				id="categories"
 				className="grid grid-cols-3 gap-6"
 			>
 				{categories.slice(0, 6).map((category) => (
@@ -43,7 +43,7 @@ const JobCategories = () => {
 			</div>
 			<div className="text-center">
 				<Link
-					to="/categories-grid"
+					to="/categories"
 					target="_blank"
 				>
 					<Button
