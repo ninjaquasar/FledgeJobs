@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
 	return (
-		<footer className="mt-24 px-60 py-24 bg-dark text-light rounded-t-[8rem] flex flex-col gap-y-12">
+		<footer className="mt-24 lg:px-40 2xl:px-60 py-24 bg-dark text-light rounded-t-[8rem] flex flex-col gap-y-12">
 			{/* 1st row - Logo, Contact */}
 			<div
 				id="foot-row-1"
@@ -57,7 +57,7 @@ const Footer = () => {
 			{/* 2nd row - Services, Legal, Social */}
 			<div
 				id="foot-row-2"
-				className="grid grid-cols-4"
+				className="flex justify-between"
 			>
 				{/* Services Links */}
 				<div
@@ -98,7 +98,7 @@ const Footer = () => {
 				{/* Legal Links */}
 				<div
 					id="foot-legal"
-					className="space-y-2 col-span-2 mx-auto"
+					className="space-y-2 mx-auto"
 				>
 					<h5 className="text-xl font-bold uppercase text-slate-300">Legal</h5>
 					<ul className="space-y-2 text-lg">

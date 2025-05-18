@@ -101,7 +101,7 @@ const Testimonials = () => {
 	return (
 		<section
 			id="testimonials"
-			className="mt-24 px-60 space-y-12"
+			className="mt-24 md:px-20 lg:px-32 2xl:px-60 space-y-12"
 		>
 			{/* Section Header */}
 			<div className="flex items-center justify-center gap-x-4">
@@ -111,7 +111,7 @@ const Testimonials = () => {
 					strokeWidth={1.25}
 					className="motion-safe:animate-bounce"
 				/>
-				<h2 className="text-4xl font-bold md">
+				<h2 className="lg:text-3xl 2xl:text-4xl font-bold md">
 					What Our <span className="text-primary">Users</span> Say
 				</h2>
 			</div>
@@ -122,7 +122,15 @@ const Testimonials = () => {
 					navigation={{
 						enabled: true,
 					}}
-					slidesPerView={3}
+					slidesPerView={1}
+					breakpoints={{
+						768: {
+							slidesPerView: 2,
+						},
+						1024: {
+							slidesPerView: 3,
+						},
+					}}
 				>
 					{testimonials.map((testimonial) => (
 						<SwiperSlide

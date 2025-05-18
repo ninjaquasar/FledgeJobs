@@ -2,15 +2,15 @@ import { Link } from "react-router";
 
 const CallToActionCard = ({ userRole = "", actionDescription = "", actions = [] }) => {
 	return (
-		<div className="p-10 rounded-3xl bg-gradient-to-br from-slate-200 via-[#a0b1c9] to-slate-300">
+		<div className="p-10 min-h-full rounded-3xl bg-gradient-to-br from-slate-200 via-[#a0b1c9] to-slate-300">
 			{/* Card Heading (For 'who') */}
 			<h3 className="text-3xl font-bold mb-2">
 				For <span className="text-indigo-900">{userRole}s</span>
 			</h3>
 			{/* Card Description */}
-			<p className="text-lg font-medium text-slate-600">{actionDescription}</p>
+			<p className="2xl:text-lg font-medium text-slate-600">{actionDescription}</p>
 			{/* Actions displaying as Button in a 2x2 Grid layout */}
-			<div className="w-4/5 mt-8 grid grid-cols-2 gap-x-6 gap-y-4">
+			<div className="lg:w-1/2 2xl:w-4/5 lg:mt-6 2xl:mt-8 grid grid-cols-1 2xl:grid-cols-2 gap-x-6 gap-y-4">
 				{actions.map((action) =>
 					action.isAnchor ? (
 						<a

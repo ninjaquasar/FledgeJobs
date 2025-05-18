@@ -19,7 +19,7 @@ const HowItWorks = () => {
 			{
 				icon: (
 					<UserCircleIcon
-						size={32}
+						size={28}
 						stroke="var(--color-primary)"
 					/>
 				),
@@ -29,7 +29,7 @@ const HowItWorks = () => {
 			{
 				icon: (
 					<FileUserIcon
-						size={32}
+						size={28}
 						stroke="var(--color-primary)"
 					/>
 				),
@@ -39,7 +39,7 @@ const HowItWorks = () => {
 			{
 				icon: (
 					<NotebookTabsIcon
-						size={32}
+						size={28}
 						stroke="var(--color-primary)"
 					/>
 				),
@@ -49,7 +49,7 @@ const HowItWorks = () => {
 			{
 				icon: (
 					<BriefcaseBusinessIcon
-						size={32}
+						size={28}
 						stroke="var(--color-primary)"
 					/>
 				),
@@ -61,7 +61,7 @@ const HowItWorks = () => {
 			{
 				icon: (
 					<SquarePenIcon
-						size={32}
+						size={28}
 						stroke="var(--color-primary)"
 					/>
 				),
@@ -71,7 +71,7 @@ const HowItWorks = () => {
 			{
 				icon: (
 					<BrainIcon
-						size={32}
+						size={28}
 						stroke="var(--color-primary)"
 					/>
 				),
@@ -81,7 +81,7 @@ const HowItWorks = () => {
 			{
 				icon: (
 					<HandshakeIcon
-						size={32}
+						size={28}
 						stroke="var(--color-primary)"
 					/>
 				),
@@ -91,7 +91,7 @@ const HowItWorks = () => {
 			{
 				icon: (
 					<ChartColumnIcon
-						size={32}
+						size={28}
 						stroke="var(--color-primary)"
 					/>
 				),
@@ -103,7 +103,7 @@ const HowItWorks = () => {
 	return (
 		<section
 			id="how-it-works"
-			className="my-24 px-60 space-y-16"
+			className="my-24 lg:px-32 2xl:px-60 space-y-16"
 		>
 			{/* Section Header */}
 			<div className="flex items-center justify-center gap-x-4">
@@ -113,7 +113,7 @@ const HowItWorks = () => {
 					strokeWidth={1.25}
 					className="motion-safe:animate-spin"
 				/>
-				<h2 className="text-4xl font-bold">
+				<h2 className="lg:text-3xl 2xl:text-4xl font-bold">
 					How It <span className="text-primary">Works</span>
 				</h2>
 			</div>

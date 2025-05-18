@@ -15,7 +15,7 @@ const JobCategories = () => {
 	return (
 		<section
 			id="job-categories"
-			className="mt-24 px-60 space-y-12"
+			className="mt-24 md:px-20 lg:px-32 2xl:px-60 space-y-12"
 		>
 			{/* Section Header */}
 			<div className="flex items-center justify-center gap-x-4">
@@ -25,14 +25,14 @@ const JobCategories = () => {
 					strokeWidth={1.25}
 					className="motion-safe:animate-bounce"
 				/>
-				<h2 className="text-4xl font-bold">
+				<h2 className="text-3xl 2xl:text-4xl font-bold">
 					Explore Job <span className="text-primary">Categories</span>
 				</h2>
 			</div>
 			{/* Categories displaying in Grid layout */}
 			<div
 				id="categories"
-				className="grid grid-cols-3 gap-6"
+				className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
 			>
 				{categories.slice(0, 6).map((category) => (
 					<CategoryCard

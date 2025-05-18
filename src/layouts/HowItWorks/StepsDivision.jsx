@@ -20,9 +20,9 @@ const StepsDivision = ({
 					<span className="text-slate-700">For</span> {children}s
 				</h3>
 				{/* Description */}
-				<p className="text-slate-700 text-lg font-medium">{description}</p>
+				<p className="text-slate-700 2xl:text-lg font-medium">{description}</p>
 				{/* Steps displaying as Card in a 2x2 Grid layout */}
-				<div className="grid grid-cols-2 gap-4 mt-8">
+				<div className="w-5/6 2xl:w-full grid grid-cols-1 2xl:grid-cols-2 gap-4 mt-4 2xl:mt-8">
 					{steps.map((step) => (
 						<StepCard
 							key={step.name}

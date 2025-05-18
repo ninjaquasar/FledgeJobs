@@ -55,7 +55,7 @@ const TrustedByTopCompanies = () => {
 					strokeWidth={1.25}
 					className="motion-safe:animate-pulse"
 				/>
-				<h2 className="text-4xl font-bold">
+				<h2 className="text-3xl 2xl:text-4xl font-bold">
 					<span className="text-primary">Trusted</span> by Top Companies
 				</h2>
 			</div>

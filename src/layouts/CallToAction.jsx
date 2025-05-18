@@ -3,7 +3,7 @@ import CallToActionCard from "../components/CallToActionCard";
 
 const CallToAction = () => {
 	return (
-		<section className="mt-24 px-60 space-y-16">
+		<section className="mt-24 lg:px-32 2xl:px-60 space-y-16">
 			{/* Section Header */}
 			<div className="space-y-3">
 				<div className="flex items-center justify-center gap-x-4">
@@ -13,7 +13,7 @@ const CallToAction = () => {
 						strokeWidth={1.25}
 						className="motion-safe:animate-pulse"
 					/>
-					<h2 className="text-4xl font-bold">
+					<h2 className="lg:text-3xl 2xl:text-4xl font-bold">
 						Ready To <span className="text-primary">Dive</span> In?
 					</h2>
 				</div>

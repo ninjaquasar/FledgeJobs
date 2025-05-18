@@ -18,14 +18,14 @@ const Hero = () => {
 		},
 	];
 	return (
-		<section className="flex max-h-104">
+		<section className="flex flex-col-reverse lg:flex-row lg:max-h-104">
 			{/* Content | Positioned Left */}
 			<div
 				id="hero-content"
-				className="bg-slate-200 w-3/5 grid place-items-center"
+				className="bg-slate-200 lg:w-3/5 grid place-items-center"
 			>
-				<div className="max-w-3/4">
-					<h1 className="text-5xl font-bold">
+				<div className="md:py-8 lg:py-0 max-w-3/4">
+					<h1 className="md:text-4xl 2xl:text-5xl font-bold">
 						Where <span className="text-primary">Talent</span> Meets{" "}
 						<span className="text-primary">Opportunity</span>
 					</h1>
@@ -42,7 +42,7 @@ const Hero = () => {
 				</div>
 			</div>
 			{/* Image Slide | Positioned Right */}
-			<div className="w-2/5 z-[-1]">
+			<div className="max-h-96 lg:w-2/5 z-[-1]">
 				<Swiper
 					modules={[Autoplay]}
 					autoplay={{
@@ -54,7 +54,7 @@ const Hero = () => {
 						<SwiperSlide key={slide.image}>
 							<img
 								src={slide.image}
-								className="size-full"
+								className="size-full object-center"
 							/>
 						</SwiperSlide>
 					))}
